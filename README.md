@@ -1,20 +1,21 @@
-# iFood Challenge
+## iFood Challenge <a name = "about"></a>
+The objective was development a solution to solve problem (diagram below) between frontend and microservice. I decided to develop a backend for conversation between frontend and microservice and implemented some concepts by DDD (Domain Drive Design) adapting the problem.
 
-## Table of Contents
+In **Backend** i separeted in Modules and when necessary joined Clients and Orders for a better return. 
 
-- [About](#about)
-- [Getting Started](#getting_started)
+In **Frontend** i used concepts like Mobile First and separeted into three components. 
 
-## About <a name = "about"></a>
+* The first Component is Search Form with all inputs
+* The second component is Input with all logic isolated like validation and specific styles and 
+* The last component is Search Resul where is all logic of the result list and Modal with details by order. 
 
-This is a challenge to iFood. The objective was development a solution to solve problem (diagram below) between frontend and microservice. I decided to develop a backend for conversation between frontend and microservice and implemented some concepts by DDD (Domain Drive Design) adapting the problem.
-In **Backend** i separeted in Modules and when necessary joined Clients and Orders for a better return. In **Frontend** i used concepts like Mobile First and separeted into three components. The first Component is Search Form with all inputs, the second component is Input with all logic isolated like validation and specific styles and the last component is Search Resul where is all logic of the result list and Modal with details by order. And finally, i change **Microservice** putting filter by Name, Email and Phone in only method, and created other methods necessary for better solution. More details in codes.
+And finally, i change **Microservice** putting filter by Name, Email and Phone in only method, and created other methods necessary for better solution. More details in codes.
 
 ### Problem
-![](./images/ifood-problem.png)
+![](./utils/images/ifood-problem.png)
 
 ### Resolution
-![](./images/ifood-solved.png)
+![](./utils/images/ifood-solved.png)
 
 ## Getting Started <a name = "getting_started"></a>
 
