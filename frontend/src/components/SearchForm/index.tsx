@@ -107,6 +107,12 @@ const SerachForm: React.FC = () => {
 
         const { email, name, phone } = data;
 
+        if (name || phone || email) {
+          setHasNoClientFilter(false);
+        } else {
+          setHasNoClientFilter(true);
+        }
+
         await api
           .get('clients/search', {
             params: {
@@ -131,12 +137,6 @@ const SerachForm: React.FC = () => {
             setOrders([]);
             setOrders(response.data);
           });
-
-        if (name || phone || email) {
-          setHasNoClientFilter(false);
-        } else {
-          setHasNoClientFilter(true);
-        }
         setIsLoading(false);
       } catch (err) {
         setIsLoading(false);

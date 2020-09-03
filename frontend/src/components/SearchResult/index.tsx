@@ -24,7 +24,7 @@ const customStyles = {
 };
 
 interface CardProps {
-  orders: any[];
+  orders: OrderResult[];
   isLoading: boolean;
 }
 
@@ -87,9 +87,7 @@ const SearchResult: React.FC<CardProps> = ({ orders, isLoading }) => {
     const data = await Promise.all(
       orders &&
         orders.map(async order => {
-          const response = await api.get(
-            `clients/search/${order.clientId || order.id}`,
-          );
+          const response = await api.get(`clients/search/${order.clientId}`);
           return response.data;
         }),
     );
